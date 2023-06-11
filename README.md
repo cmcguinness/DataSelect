@@ -8,7 +8,7 @@ This is a custom LWC that supports a couple useful things:
 
 
 
-All inputs to the LWC are passed as options.  The options are:
+All inputs to the LWC are passed as properties.  The properties are:
 
 | Key         | Required? | Description                                                  |
 | ----------- | --------- | ------------------------------------------------------------ |
