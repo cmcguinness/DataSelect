@@ -58,3 +58,7 @@ Further suppose you want to show Label to the user, but have the value of the el
 Create a new LWC in Visual Studio Code and drop the .js, .html, and .xml files onto it.
 
 Note that you may or may not need a *NS* specifier in the XML file. See [this documentation](https://help.salesforce.com/s/articleView?id=sf.os_create_a_custom_lightning_web_component_for_omniscript.htm&type=5) if you're unclear.
+
+### Reminder
+
+Visual Studio Code does not autosave files by default, and if you copy and past this code into VSC, please make sure they are all saved before deploying to the org.
