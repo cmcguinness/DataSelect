@@ -20,7 +20,7 @@ All inputs to the LWC are passed as properties.  The properties are:
 
 The specification of both _data and _path can seem confusing.  A simple example might help explain.
 
-Suppose you hvae a Data Raptor which returned a list of contacts:
+Suppose you have a Data Raptor which returned a list of contacts:
 
 ````json
 {
@@ -61,4 +61,4 @@ Note that you may or may not need a *NS* specifier in the XML file. See [this do
 
 ### Reminder
 
-Visual Studio Code does not autosave files by default, and if you copy and past this code into VSC, please make sure they are all saved before deploying to the org.
+Visual Studio Code does not autosave files by default, and if you copy and paste this code into VSC, please make sure they are all saved before deploying to the org.
