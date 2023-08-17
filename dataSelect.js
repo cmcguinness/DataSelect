@@ -1,4 +1,3 @@
-
 import { LightningElement, track,  api } from 'lwc';
 import { OmniscriptBaseMixin } from 'omnistudio/omniscriptBaseMixin';
 
@@ -30,6 +29,8 @@ export default class DataSelect extends OmniscriptBaseMixin(LightningElement)  {
     _label_path = null;
     _value_data = null;
     _value_path = null;
+    _extra_name = null;
+    _extra_path = null;
 
     /**
      * 
@@ -103,6 +104,22 @@ export default class DataSelect extends OmniscriptBaseMixin(LightningElement)  {
             this._value_path = data;
     }
 
+    @api
+        get extra_name() {
+            return this._extra_name;
+        }
+        set extra_name(data) {
+            this._extra_name  = data;
+        }
+
+    @api
+        get extra_path() {
+            return this._extra_path;
+        }
+        set extra_path(data) {
+            this._extra_path  = data;
+        }
+
 
     connectedCallback() {
         this.cb_label = this.omniJsonDef.propSetMap.label;
@@ -138,6 +155,16 @@ export default class DataSelect extends OmniscriptBaseMixin(LightningElement)  {
             this.omniUpdateDataJson(values[selected]);
         } else {
             this.omniUpdateDataJson(values[selected][value_path]);
+        }
+
+        if (this._extra_name != null) {
+            let tosave = {};
+            if (this._extra_path == null) {
+                tosave[this._extra_name] = values[selected];
+            } else {
+                tosave[this._extra_name] = values[selected][this._extra_path];
+            }
+            this.omniApplyCallResp(tosave);
         }
     }
 
